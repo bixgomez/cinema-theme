@@ -1,0 +1,95 @@
+
+// The grid for the teaser
+.film-teaser {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: .25em;
+  margin-bottom: 2em;
+}
+
+.film-teaser {
+  background-color: rgba(white, .125);
+  border: 1px solid rgba(black, .125);
+  padding: .25em;
+
+  &--sidebar {
+    background-color: rgba(white, .125);
+    border: 1px solid rgba(black, .125);
+    padding: .5em;
+  }
+
+  &--main {
+    background-color: rgba(white, .125);
+    border: 1px solid rgba(black, .125);
+    padding: .5em;
+  }
+}
+
+.film-teaser--film-info {
+  background-color: rgba(white, .25);
+  border: 1px solid rgba(black, .25);
+  padding: .5em;
+  margin-bottom: .5em;
+}
+
+.film-teaser--content {
+  background-color: rgba(white, .25);
+  border: 1px solid rgba(black, .25);
+  padding: .5em;
+  margin-bottom: .5em;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.film-teaser--screenings {
+  background-color: rgba(white, .25);
+  border: 1px solid rgba(black, .25);
+  padding: .5em;
+}
+
+.week {
+  background-color: rgba(white, .125);
+  border: 1px solid rgba(black, .125);
+  padding: .5em;
+  margin-bottom: .5em;
+}
+
+.film-poster {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+
+
+
+.film-teaser {
+  font-size: .9em;
+}
+
+.film-teaser--film-info {
+  font-size: .85em;
+}
+
+.film-teaser--content {
+  font-size: 1em;
+}
+
+.film-teaser--screenings {
+  font-size: 1em;
+}
+
+
+
+
+
+

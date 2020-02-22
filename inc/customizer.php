@@ -1,6 +1,6 @@
 <?php
 /**
- * Llano Kid Books Theme Customizer
+ * Cinema Theme Theme Customizer
  *
  * @package Cinema_Theme
  */

@@ -1,4 +1,4 @@
-=== Llano Kid Books ===
+=== Cinema Theme ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Llano Kid Books.
+A starter theme called Cinema Theme.
 
 == Description ==
 
@@ -25,7 +25,7 @@ A custom theme for Paul Brown\'s author site
 
 = Does this theme support any plugins? =
 
-Llano Kid Books includes support for Infinite Scroll in Jetpack.
+Cinema Theme includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

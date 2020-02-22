@@ -1,6 +1,6 @@
 <?php
 /**
- * Llano Kid Books functions and definitions
+ * Cinema Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -19,7 +19,7 @@ if ( ! function_exists( 'cinema_theme_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Llano Kid Books, use a find and replace
+		 * If you're building a theme based on Cinema Theme, use a find and replace
 		 * to change 'cinema_theme' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'cinema_theme', get_template_directory() . '/languages' );

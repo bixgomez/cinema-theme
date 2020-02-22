@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  background-color: rgba(black, .6);
+}
+
+.site {
+  width: 100%;
+  background-color: rgba(white, .25);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0;
+  margin: 0 auto;
+  background-color: rgba(white, .25);
+}
+
+.container {
+  padding: 1em;
+  width: 100%;
+  max-width: 100%;
+  background-color: rgba(white, .25);
+}
+
+.row {
+  margin: 0;
+}
