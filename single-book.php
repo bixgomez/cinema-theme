@@ -22,7 +22,7 @@ $my_sample_chapters = get_post_meta( get_the_ID(), 'sample_chapters', true);
 
 <div class="content-layout right-sidebar">
 
-  <div class="main">
+  <main class="site-main">
 
     <div class="content content--book">
 

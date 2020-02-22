@@ -13,7 +13,7 @@
 
       </div>
     </div>
-	</div><!-- #content -->
+	</section>
 
 	<footer class="section-outer section-outert--site-footer">
     <div class="section section--site-footer">

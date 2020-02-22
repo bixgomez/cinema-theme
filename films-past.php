@@ -12,21 +12,17 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
     <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-      <div class="row">
+      <main class="site-main" id="main">
 
-        <main class="site-main" id="main">
+        <?php
 
-          <?php
+        while ( have_posts() ) : the_post();
+          the_title( '<h1 class="entry-title">', '</h1>' );
+          endwhile; // end of the loop.
 
-          while ( have_posts() ) : the_post();
-            the_title( '<h1 class="entry-title">', '</h1>' );
-            endwhile; // end of the loop.
+        ?>
 
-          ?>
-
-        </main><!-- #main -->
-
-      </div><!-- .row -->
+      </main><!-- #main -->
 
     </div><!-- Container end -->
 
