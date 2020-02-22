@@ -1,0 +1,123 @@
+body.home .section--content {
+  width: 100%;
+  max-width: 100%;
+
+  .section-inner {
+    padding: 0;
+  }
+}
+
+.front-page-grid {
+  max-width: $max-site-width;
+  margin: 1em auto;
+  padding: 0 1em;
+
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr;
+
+  @include breakpoint($md) {
+    grid-template-columns: 1fr 1fr;
+
+    .item.full-width {
+      grid-column: auto / span 2;
+    }
+  }
+
+  @include breakpoint($lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .item.full-width {
+      grid-column: auto / span 3;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.front-page-content--wrapper {
+  max-width: $max-site-width;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.front-page-content {
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  background-color: rgba(white, .25);
+
+  .fl-row-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    font-size: 1em;
+    transition: $transition-fast;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    @include breakpoint($sm) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1em;
+      font-size: .8em;
+    }
+
+    @include breakpoint($md) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.5em;
+      font-size: 1em;
+    }
+  }
+
+  // Ignore all module wrappers, as they are unpredictable.
+  .fl-col-group {
+    display: contents;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .fl-col {
+    display: contents;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .fl-col-content {
+    display: contents;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  div.fl-module-teaser {
+    min-height: 3em;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .fl-builder-content .fl-row > .fl-row-content-wrap .fl-module-content {
+    margin: 0;
+    height: 100%;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}

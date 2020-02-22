@@ -1,0 +1,43 @@
+// Color variables.
+$color--white: #FFF;
+$color--black: #000;
+$color--primary: #006667;
+$color--primary-light: mix($color--primary, $color--white, 50%);
+$color--primary-lighter: mix($color--primary, $color--white, 30%);
+$color--primary-lightest: mix($color--primary, $color--white, 10%);
+$color--primary-dark: mix($color--primary, $color--black, 50%);
+
+$color--gray-md: mix($color--black, $color--white, 50%);
+$color--gray-light: mix($color--black, $color--white, 40%);
+$color--gray-lighter: mix($color--black, $color--white, 25%);
+$color--gray-lightest: mix($color--black, $color--white, 10%);
+$color--gray-dark: mix($color--white, $color--black, 40%);
+$color--gray-darker: mix($color--white, $color--black, 25%);
+$color--gray-darkest: mix($color--white, $color--black, 10%);
+
+$color--header: $color--gray-lightest;
+$color--footer: lighten($color--header, 5%);
+
+// Typography variables.
+$font-choice--base: 'Open Sans', 'Lato', 'Merriweather', Palatino, Times, serif;
+$font-choice--heading: 'Josefin Sans X','Montserrat', Helvetica, Arial, sans-serif;
+
+$font-size--html: 16px;
+$font-size--base: 1em;
+
+$font-size--xxs: $font-size--base * .7;
+$font-size--xs: $font-size--base * .8;
+$font-size--sm: $font-size--base * .9;
+$font-size--md: $font-size--base * 1;
+$font-size--lg: $font-size--base * 1.25;
+$font-size--xl: $font-size--base * 1.5;
+$font-size--xxl: $font-size--base * 1.75;
+$font-size--xxxl: $font-size--base * 2;
+
+$lineheight-default: 1.7;
+$lineheight-headings: 1.2;
+
+$site-padding: 30px;
+
+$wpadminbar--height: 32px;
+$wpadminbar--height--mobile: 46px;

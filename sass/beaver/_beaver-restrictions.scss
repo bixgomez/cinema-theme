@@ -1,0 +1,10 @@
+body {
+  @include yes-beaver;
+}
+
+body.page-schedule,
+body.page-media,
+body.page-illustrations-for-natural-meditation,
+body.page-illustrations-for-fear-less {
+  @include no-beaver;
+}

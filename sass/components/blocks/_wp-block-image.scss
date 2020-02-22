@@ -1,0 +1,40 @@
+figure {
+  margin: 0;
+}
+
+.wp-block-image {
+
+  margin: 0 0 1.5em;
+
+  figure {
+    margin-bottom: 1em;
+
+    &.alignleft {
+      @include block--align-left;
+    }
+
+    &.alignright {
+      @include block--align-right;
+    }
+
+    figcaption {
+      margin-bottom: 0;
+    }
+  }
+}
+
+img[class*="wp-image-"],
+img[class*=" wp-image-"] {
+
+  &.alignleft {
+    @include img--align-left;
+  }
+
+  &.alignright {
+    @include img--align-right;
+  }
+}
+
+.editor-block-list__layout .editor-block-list__block[data-align=right]>.editor-block-list__block-edit {
+  @include block--align-right;
+}

@@ -1,0 +1,19 @@
+.grid-layout--header {
+  display: flex;
+  align-items: center;
+
+  .site-branding {
+    flex: none;
+    width: max-content;
+  }
+  .main-navigation {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.section-inner--header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

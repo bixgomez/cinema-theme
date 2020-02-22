@@ -1,0 +1,55 @@
+.section-outer {
+  width: 100%;
+
+  &--header {
+
+  }
+
+  &--content {
+
+  }
+
+  &--footer {
+
+  }
+}
+
+.section {
+  width: 100%;
+  max-width: $max-site-width;
+  padding: 0;
+  margin: 0 auto;
+
+  &--header {
+    max-width: 100%;
+  }
+
+  &--content {
+
+  }
+
+  &--footer {
+    max-width: 100%;
+  }
+}
+
+.section-inner {
+  @include site-padding;
+  @include section-padding;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+
+  &--header {
+    max-width: $max-site-width;
+  }
+
+  &--content {
+
+  }
+
+  &--footer {
+    max-width: $max-site-width;
+  }
+}
+
