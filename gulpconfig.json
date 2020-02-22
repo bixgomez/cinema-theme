@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "http://wp.gicinema.local/",
+    "proxy": "http://grandillusioncinema.lndo.site/",
     "notify": false
   },
   "browserSyncWatchFiles" : [

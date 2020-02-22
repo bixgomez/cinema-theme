@@ -9,7 +9,7 @@ var gulp        = require('gulp'),
 
 // Directory for storing sass and css files
 var sassFiles          = './sass/**/*.scss';
-var cssDir             = './css';
+var cssDir             = '.';
 
 gulp.task('sass', function () {
 

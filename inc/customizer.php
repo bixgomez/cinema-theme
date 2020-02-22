@@ -1,6 +1,6 @@
 <?php
 /**
- * Cinema Theme Theme Customizer
+ * Llano Kid Books Theme Customizer
  *
  * @package Cinema_Theme
  */
@@ -50,6 +50,6 @@ function cinema_theme_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function cinema_theme_customize_preview_js() {
-	wp_enqueue_script( 'cinema-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'cinema_theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'cinema_theme_customize_preview_js' );

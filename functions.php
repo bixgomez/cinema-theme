@@ -1,6 +1,6 @@
 <?php
 /**
- * Cinema Theme functions and definitions
+ * Llano Kid Books functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -19,10 +19,10 @@ if ( ! function_exists( 'cinema_theme_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Cinema Theme, use a find and replace
-		 * to change 'cinema-theme' to the name of your theme in all the template files.
+		 * If you're building a theme based on Llano Kid Books, use a find and replace
+		 * to change 'cinema_theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'cinema-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'cinema_theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'cinema_theme_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'cinema-theme' ),
+			'menu-1' => esc_html__( 'Primary', 'cinema_theme' ),
 		) );
 
 		/*
@@ -105,9 +105,9 @@ add_action( 'after_setup_theme', 'cinema_theme_content_width', 0 );
  */
 function cinema_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'cinema-theme' ),
+		'name'          => esc_html__( 'Sidebar', 'cinema_theme' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'cinema-theme' ),
+		'description'   => esc_html__( 'Add widgets here.', 'cinema_theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -120,12 +120,11 @@ add_action( 'widgets_init', 'cinema_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function cinema_theme_scripts() {
-	wp_enqueue_style( 'cinema-theme-style', get_stylesheet_uri() );
-  wp_enqueue_style( 'cinema-theme-styles', get_template_directory_uri() . '/styles/css/styles.css' );
-	wp_enqueue_script( 'cinema-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'cinema-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-  wp_enqueue_script( 'hc-offcanvas-nav', get_template_directory_uri() .'/js/hc-offcanvas-nav.js', array('jquery'), null, true );
-  wp_enqueue_script( 'hc-offcanvas-nav--config', get_template_directory_uri() .'/js/hc-offcanvas-nav--config.js', array('jquery'), null, true );
+	wp_enqueue_style( 'cinema_theme-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'cinema_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'cinema_theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -160,3 +159,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Add REST API and GraphQL support to Book post type.
+ */
+add_filter( 'register_post_type_args', 'my_post_type_args', 10, 2 );
+
+function my_post_type_args( $args, $post_type ) {
+
+  if ( 'book' === $post_type ) {
+    $args['show_in_graphql'] = true;
+    $args['graphql_single_name'] = 'Book';
+    $args['graphql_plural_name'] = 'Books';
+
+    $args['show_in_rest'] = true;
+
+    // Optionally customize the rest_base or rest_controller_class
+    $args['rest_base']             = 'books';
+    $args['rest_controller_class'] = 'WP_REST_Posts_Controller';
+  }
+
+  return $args;
+}
