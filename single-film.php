@@ -24,45 +24,51 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
       <?php
 
+      $output = '';
+
       while ( have_posts() ) : the_post();
 
-        the_title( '<h1 class="entry-title">', '</h1>' );
+        $this_post_id = get_the_ID();
 
-        $this_director = do_shortcode('[film_director]');
-        $this_director = (string) $this_director;
+        $output .= do_shortcode('[film_teaser film_id="' . $this_post_id .'"]');
 
-        $this_year = do_shortcode('[film_year]');
-        $this_year = (string) $this_year;
+//        the_title( '<h1 class="entry-title">', '</h1>' );
+//
+//        $this_director = do_shortcode('[film_director]');
+//        $this_director = (string) $this_director;
+//
+//        $this_year = do_shortcode('[film_year]');
+//        $this_year = (string) $this_year;
+//
+//        $this_length = do_shortcode('[film_length]');
+//        $this_length = (string) $this_length;
+//
+//        $this_format = do_shortcode('[film_format]');
+//        $this_format = (string) $this_format;
+//
+//        $this_showtimes = do_shortcode('[film_showtimes]');
+//
+//        print '<div>';
+//        print $this_director;
+//        if ($this_director && $this_year) { print ' | '; }
+//        print $this_year;
+//        print '</div>';
+//
+//        print '<div>';
+//        print $this_length;
+//        if ($this_length && $this_format) { print ' | '; }
+//        print $this_format;
+//        print '</div>';
+//
+//        the_content();
+//
+//        print '<div>';
+//        print $this_showtimes;
+//        print '</div>';
+//
+//        echo do_shortcode('[film_poster]');
 
-        $this_length = do_shortcode('[film_length]');
-        $this_length = (string) $this_length;
-
-        $this_format = do_shortcode('[film_format]');
-        $this_format = (string) $this_format;
-
-        $this_showtimes = do_shortcode('[film_showtimes]');
-
-        print '<div>';
-        print $this_director;
-        if ($this_director && $this_year) { print ' | '; }
-        print $this_year;
-        print '</div>';
-
-        print '<div>';
-        print $this_length;
-        if ($this_length && $this_format) { print ' | '; }
-        print $this_format;
-        print '</div>';
-
-        // understrap_posted_on();
-
-        the_content();
-
-        print '<div>';
-        print $this_showtimes;
-        print '</div>';
-
-        echo do_shortcode('[film_poster]');
+        print $output;
 
         // If comments are open or we have at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) :
